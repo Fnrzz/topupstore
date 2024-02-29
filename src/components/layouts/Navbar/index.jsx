@@ -10,7 +10,7 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <nav className="w-full flex md:flex-row flex-col md:items-center md:justify-between lg:px-[40px] py-[20px] px-[20px] bg-white fixed z-10">
+    <nav className="w-full flex md:flex-row flex-col md:items-center md:justify-between lg:px-[40px] py-[20px] px-[20px] bg-white fixed top-[-1px] z-10">
       <div className="flex justify-between items-center">
         <Image
           src="/images/logo.png"
