@@ -7,13 +7,13 @@ const Kemudahan = () => {
       id="kemudahan"
       className="flex md:flex-row flex-col items-center gap-[40px]"
     >
-      <div className="md:w-1/2 w-full h-[500px] ">
+      <div className="md:w-1/2 w-full">
         <Image
           src="/images/mobile.png"
           alt="mobile"
           width={600}
           height={500}
-          className="w-full h-full object-contain"
+          className="w-full h-[500px] object-contain"
         />
       </div>
       <div className="md:w-1/2 w-full flex flex-col md:gap-[30px] gap-[20px]">

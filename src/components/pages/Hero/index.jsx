@@ -34,7 +34,7 @@ const Hero = () => {
           alt="hero"
           width={600}
           height={450}
-          className="hidden md:block"
+          className="hidden md:block w-full h-full object-contain"
         />
       </div>
     </section>
