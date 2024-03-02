@@ -1,6 +1,20 @@
-import React from "react";
+"use client";
+import CountUp from "react-countup";
+import { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 const Dukungan = () => {
+  const [isInView, setIsInView] = useState(false);
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Set triggerOnce true agar animasi hanya dijalankan sekali saat elemen masuk ke dalam viewport
+  });
+
+  useEffect(() => {
+    if (inView) {
+      setIsInView(true);
+    }
+  }, [inView]);
+
   return (
     <section id="dukungan" className="flex flex-col gap-[60px]">
       <div
@@ -20,7 +34,7 @@ const Dukungan = () => {
             data-aos-duration="1000"
             data-aos-delay="100"
           >
-            100+
+            {isInView ? <CountUp start={0} end={100} duration={5} /> : 0}+
           </h1>
           <h2
             className="lg:text-[20px] text-[14px] text-mycolors-secondary text-center font-medium"
@@ -38,7 +52,7 @@ const Dukungan = () => {
             data-aos-duration="1000"
             data-aos-delay="100"
           >
-            2000+
+            {isInView ? <CountUp start={0} end={2000} duration={3} /> : 0}+
           </h1>
           <h2
             className="lg:text-[20px] text-[14px] text-mycolors-secondary text-center font-medium"
@@ -49,14 +63,17 @@ const Dukungan = () => {
             Transaksi
           </h2>
         </div>
-        <div className="md:w-full w-1/2 flex flex-col items-center md:border-r-[1px] md:border-mycolors-secondary gap-[12px] px-[20px]">
+        <div
+          className="md:w-full w-1/2 flex flex-col items-center md:border-r-[1px] md:border-mycolors-secondary gap-[12px] px-[20px]"
+          ref={ref}
+        >
           <h1
             className="lg:text-[32px] md:text-[24px] text-[20px] text-mycolors-primary font-bold"
             data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-delay="100"
           >
-            15+
+            {isInView ? <CountUp start={0} end={15} duration={5} /> : 0}+
           </h1>
           <h2
             className="lg:text-[20px] text-[14px] text-mycolors-secondary text-center font-medium"
@@ -74,7 +91,8 @@ const Dukungan = () => {
             data-aos-duration="1000"
             data-aos-delay="100"
           >
-            4.7
+            {isInView ? <CountUp start={0} end={4} duration={8} /> : 0}
+            .7
           </h1>
           <h2
             className="lg:text-[20px] text-[14px] text-mycolors-secondary text-center font-medium"
