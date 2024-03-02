@@ -7,7 +7,11 @@ const Hero = () => {
       id="hero"
       className="flex items-center justify-between md:mt-[150px] mt-[100px] lg:gap-[100px] md:gap-[50px]"
     >
-      <div className="w-full flex flex-col lg:gap-[30px] gap-[20px]">
+      <div
+        className="w-full flex flex-col lg:gap-[30px] gap-[20px]"
+        data-aos="fade-right"
+        data-aos-duration="1000"
+      >
         <h6 className="md:text-[16px] text-[14px] text-mycolors-secondary font-light">
           Hallo Gamers
         </h6>
@@ -28,7 +32,7 @@ const Hero = () => {
           </Link>
         </div>
       </div>
-      <div className="md:w-full">
+      <div className="md:w-full" data-aos="fade-left" data-aos-duration="1000">
         <Image
           src="/images/image1.png"
           alt="hero"
