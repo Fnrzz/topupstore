@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 const Kemudahan = () => {
@@ -12,13 +11,13 @@ const Kemudahan = () => {
         data-aos="fade-right"
         data-aos-duration="1000"
       >
-        <Image
-          src="/images/mobile.png"
-          alt="mobile"
-          width={600}
-          height={500}
+        <video
+          src="/videos/mobile.mp4"
+          autoPlay
+          muted
+          loop
           className="w-full h-[500px] object-contain"
-        />
+        ></video>
       </div>
       <div className="md:w-1/2 w-full flex flex-col md:gap-[30px] gap-[20px]">
         <h1
